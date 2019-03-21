@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Event Search</string>
+
+    <string name="google_maps_key">AIzaSyAl9MWLoCMsYAHXe5UF-MvHjcO6HW1C_Ds</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_icon">Category Icon</string>
+    <string name="eventList_name">Search Results</string>
+    <string name="googleKey">AIzaSyAl9MWLoCMsYAHXe5UF-MvHjcO6HW1C_Ds</string>
+    <!-- artist detail -->
+    <string name="artistName">Name</string>
+    <string name="artistFollower">Follower</string>
+    <string name="artistPopularity">Popularity</string>
+    <string name="artistCheckAt">Check At</string>
+    <!-- venue detail-->
+    <string name="venueName">Name</string>
+    <string name="venueAddress">Address</string>
+    <string name="venueCity">City</string>
+    <string name="venuePhoneNumber">Phone Number</string>
+    <string name="venueOpenHour">Open Hours</string>
+    <string name="venueGeneralRule">General Rule</string>
+    <string name="venueChildRule">Child Rule</string>
+    <string name="rational">Need to get location to search for events</string>
+    <string name="rationale_ask_ok">ALLOW</string>
+    <string name="rationale_ask_cancel">DENY</string>
+    <string-array name="category_array">
+        <item>All</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Arts &amp; Theatre</item>
+        <item>Film</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="unit">
+        <item>Miles</item>
+        <item>Kilometers</item>
+    </string-array>
+    <string-array name="type_array">
+        <item>Default</item>
+        <item>Event Name</item>
+        <item>Time</item>
+        <item>Artist</item>
+        <item>Type</item>
+
+    </string-array>
+    <string-array name="order">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+</resources>
