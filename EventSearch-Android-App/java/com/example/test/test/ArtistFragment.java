@@ -90,16 +90,6 @@ public class ArtistFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //final ListView artistListView = view.findViewById(R.id.ListView_artist);
-
-       // artists = new ArrayList<>();
-       // artistAdapter  = new ArtistAdapter(this.getContext(), artists);
-//        final EventDetail eventDetail = ((DetailActivity)getActivity()).getEventDetail();
-//        if (eventDetail != null) {
-//            getAllArtists(eventDetail);
-//        }
-//        artistListView.setAdapter(artistAdapter);
-
     }
 
     public void getAllArtists(EventDetail eventDetail)  {
@@ -126,7 +116,6 @@ public class ArtistFragment extends Fragment {
             artistListView.setAdapter(artistAdapter);
 
             for (final String name : artistName) {
-                System.out.println("inner for loop ------ name = "+name);
                 final Artist artist = new Artist();
                 if (category.toLowerCase().contains("music")) {
 
@@ -135,11 +124,10 @@ public class ArtistFragment extends Fragment {
                     ApiCall.getInputLocationEvents(getActivity(), urlArtist, new Response.Listener<String>(){
                         @Override
                         public void onResponse(String response) {
-                            System.out.println("------------ artist reasponse "+response);
                             artist.setName(name);
                             try {
                                 if (!response.equals("null")) {
-                                    System.out.println("!= null !!!!!!!!! ");
+                                
                                     JSONObject jsonArtist = new JSONObject(response);
                                     artist.setName(jsonArtist.getString("name"));
                                     artist.setFollowers(jsonArtist.getString("followers"));
