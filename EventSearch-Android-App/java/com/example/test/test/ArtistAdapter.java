@@ -43,14 +43,11 @@ public class ArtistAdapter extends ArrayAdapter {
         }
         TextView titleTextView = convertView.findViewById(R.id.textView_artistTitleValue);
         titleTextView.setText(Validation.checkString(artist.getName()));
-       // titleTextView.setText(artist.getName());
         if (artist.getFollowers() == null && artist.getPopularity() == null && artist.getCheckAt() == null) {
-           System.out.println("remove all views");
             TableLayout artistLayout =  convertView.findViewById(R.id.table_artist);
             artistLayout.removeAllViewsInLayout();
         }
         else {
-            System.out.println("not remove");
             TextView nameTextView = convertView.findViewById(R.id.textView_artistNameValue);
             TextView followersTextView = convertView.findViewById(R.id.textView_followerValue);
             TextView popularityTextView = convertView.findViewById(R.id.textView_popularityValue);
@@ -105,7 +102,6 @@ public class ArtistAdapter extends ArrayAdapter {
             }
            i++;
         }
-
         return convertView;
 
     }
