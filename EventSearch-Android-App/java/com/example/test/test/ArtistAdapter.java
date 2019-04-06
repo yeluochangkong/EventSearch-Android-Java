@@ -82,7 +82,6 @@ public class ArtistAdapter extends ArrayAdapter {
        LinearLayout photoLayout = convertView.findViewById(R.id.linearLayout_photo);
         photoLayout.removeAllViewsInLayout();  // -------------------
         int i = 0;
-        System.out.println("adapter length ="+photos.size());
         for (String photo: photos) {
 
             if (i < 9) {
