@@ -128,7 +128,6 @@ public class FavFragment extends Fragment {
            Collections.sort(eventList, Event.addTimeComparator);
         }
 
-         //prefs.edit().clear().apply();
         eventListAdapter.notifyDataSetChanged();
 
         eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -156,7 +155,6 @@ public class FavFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        System.out.println("************onAttach************");
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
