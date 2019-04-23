@@ -21,16 +21,13 @@ import java.util.Date;
 
 public class EventListAdapter extends ArrayAdapter {
     private FavFragment favFragment;
-   // private Context context;
     public EventListAdapter(Context context, ArrayList<Event> list) {
         super(context, 0,list);
-        //context = context;
     }
 
     public EventListAdapter(Context context, ArrayList<Event> list, FavFragment favFragment) {
         super(context, 0,list);
         this.favFragment  =favFragment;
-        //context = context;
     }
     @Override
     public View getView(int position, View convertView,  ViewGroup parent) {
@@ -44,7 +41,6 @@ public class EventListAdapter extends ArrayAdapter {
         TextView eventNameTextView = convertView.findViewById(R.id.eventName_textView);
         TextView venueNameTextView = convertView.findViewById(R.id.venueName_textView);
         TextView dateTextView = convertView.findViewById(R.id.date_textView);
-       // TextView idTextView = convertView.findViewById(R.id.textView_id);
        final  ImageButton imageBtn = convertView.findViewById(R.id.imageButton);
 
 
@@ -70,15 +66,12 @@ public class EventListAdapter extends ArrayAdapter {
                     Toast.makeText(getContext(),tip,Toast.LENGTH_LONG).show();
                 }
                 else {
-                    System.out.println("delete from fav");
                     String tip = event.getEventName() + "was removed from favorites";
-
                     prefsEditor.remove(event.getId());
                     prefsEditor.commit();
                     Toast.makeText(getContext(),tip,Toast.LENGTH_LONG).show();
                     imageBtn.setImageResource(R.drawable.ic_heart_outline_black);
                     if (favFragment != null) {
-                        System.out.println(" !!!!!!! != null ");
                         favFragment.getFav();
                     }
                 }
@@ -95,7 +88,6 @@ public class EventListAdapter extends ArrayAdapter {
         eventNameTextView.setText(event.getEventName());
         venueNameTextView.setText(event.getVenueInfo());
         dateTextView.setText(event.getDate());
-       // idTextView.setText(event.getId());
 
         SharedPreferences prefs = getContext().getSharedPreferences("favList", Context.MODE_PRIVATE);
         if(prefs != null) {
